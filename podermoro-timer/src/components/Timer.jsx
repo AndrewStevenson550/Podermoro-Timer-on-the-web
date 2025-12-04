@@ -83,7 +83,7 @@ function Timer() {
           {/* Start/Pause Button */}
           <button 
             onClick={isRunning ? stopTimer : startTimer}
-            className=' bg-green-500 cursor-pointer ml-89 mt-10 mb-0.5'
+            className=' bg-green-500 cursor-pointer ml-89 mt-10 mb-0.5 w-20 h-10 rounded-lg'
           >
             {isRunning ? 'Pause' : (time === 0 ? 'Restart' : 'Start')}
           </button>
@@ -91,7 +91,7 @@ function Timer() {
           {/* Reset Button (Using original styling) */}
           <button 
             onClick={resetTimer}
-            className=' bg-green-500 cursor-pointer ml-89 mt-10 mb-0.5'
+            className=' bg-green-500 cursor-pointer ml-89 mt-10 mb-0.5 w-20 h-10 rounded-lg'
           >
             Reset
           </button>
