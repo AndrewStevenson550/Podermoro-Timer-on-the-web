@@ -28,8 +28,8 @@ function Timer() {
         // Start the countdown, updating time every 1000ms (1 second)
         intervalRef.current = setInterval(() => {
             // Use functional state update to ensure we always use the latest time value
-            SetTime(prevTime => {
-                const newTime = prevTime - 1000;
+            SetTime(prevTimer=> {
+                const newTime = prevTimer- 1000;
 
                 // Stop condition: if time runs out
                 if (newTime <= 0) {
@@ -74,12 +74,12 @@ function Timer() {
   }
 
   return (
-    <div className='bg-amber-100 border-black border rounded-lg pl-4 w-200 justify-center items-center ml-92'>
+    <div className='border-black border rounded-lg pl-4 w-200 justify-center items-center ml-92 bg-amber-50'>
         {/* Display the formatted time MM:SS */}
         <h1 className=' text-center p-50'>{formatTime(time)}</h1>
 
 
-        <div className="justify-center align-middle items-center">
+        <div className="justify-center align-middle items-center p-0.5">
           {/* Start/Pause Button */}
           <button 
             onClick={isRunning ? stopTimer : startTimer}
